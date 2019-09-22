@@ -1,9 +1,10 @@
 public class UnfairCoin implements Coin{
 
     private boolean[] sequence;
-    private int i = -1;
+    private int i;
 
     public UnfairCoin(boolean[] sequence) {
+        this.i = -1;
         this.sequence = sequence;
     }
 
@@ -13,6 +14,6 @@ public class UnfairCoin implements Coin{
         if(length == 0) {
             return false;
         }
-        return sequence[(i+1)%length];
+        return sequence[(++i)%length];
     }
 }
