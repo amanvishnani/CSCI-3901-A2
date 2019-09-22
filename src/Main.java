@@ -2,19 +2,21 @@ public class Main {
 
     public static void main(String[] args) {
         boolean[] debugSequence = {false, true, true, false, true, false, false, true, true, false, false, false, true, false};
-
-//        Coin coin = new UnfairCoin(debugSequence);
-        Coin coin = new FairCoin();
+        String[] testStrings = {"apple", "date", "grape", "lettuce", "orange", "pepper", "salt", "tea"};
+//        ICoin coin = new UnfairCoin(debugSequence);
+        ICoin coin = new FairCoin();
 
         ListHierarchy lh = new ListHierarchy(coin);
-        lh.add("apple");
-        lh.add("date");
-        lh.add("grape");
-        lh.add("lettuce");
-        lh.add("orange");
-        lh.add("pepper");
-        lh.add("salt");
-        lh.add("tea");
+        for (String str :
+                testStrings) {
+            lh.add(str);
+        }
         lh.print();
+
+        for (String str :
+                testStrings) {
+            System.out.printf("%s -> %s\n",str, lh.find(str));
+        }
+        System.out.printf("%s -> %s\n","Aman", lh.find("Aman"));
     }
 }

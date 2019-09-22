@@ -63,6 +63,14 @@ public class Node {
         this.down = down;
     }
 
+    public boolean hasNext() {
+        return this.getNext() != null;
+    }
+
+    public boolean hasPrevious() {
+        return this.getPrevious() != null;
+    }
+
     public String toString() {
         StringBuilder builder = new StringBuilder(this.data);
         builder.append("[");

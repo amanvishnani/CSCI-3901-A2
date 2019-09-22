@@ -1,4 +1,4 @@
-public class UnfairCoin implements Coin{
+public class UnfairCoin implements ICoin {
 
     private boolean[] sequence;
     private int i;

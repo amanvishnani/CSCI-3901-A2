@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class FairCoin implements Coin {
+public class FairCoin implements ICoin {
     Random random;
     public FairCoin() {
         random = new Random();
