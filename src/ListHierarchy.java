@@ -3,9 +3,23 @@ public class ListHierarchy {
     private ICoin coin;
     private int levels = 0;
 
+    /**
+     * Add a string to the structure.
+     * @param key the item to be inserted.
+     * @return true if success
+     */
     public boolean add( String key ) {
         return add(key, 0, null, null);
     }
+
+    /**
+     * A utility method to add key to the structure at a particular level.
+     * @param key Item to be added.
+     * @param level the level where it should be inserted.
+     * @param startFrom acts as head of the list node to add element from.
+     * @param linkFrom acts as the node from the bottom hierarchy.
+     * @return
+     */
     private boolean add(String key, int level, Node startFrom, Node linkFrom) {
         handleOverflow();
         Node item = new Node(key);
@@ -56,6 +70,12 @@ public class ListHierarchy {
         return true;
     }
 
+    /**
+     * Adds a node before a before an element.
+     * @param node The reference node.
+     * @param newNode The node item to be added.
+     * @return true on success.
+     */
     private boolean addBefore(Node node, Node newNode) {
         Node previous = node.getPrevious();
 
@@ -84,8 +104,8 @@ public class ListHierarchy {
         if(flag) add(key, level, startFrom, linkFrom);
     }
 
-    boolean find( String key ) {
-        Node dummy = new Node(key);
+    public boolean find( String key ) {
+        Node searchItem = new Node(key);
         Node pointer = hierarchy[levels-1];
         do {
             if(
@@ -96,16 +116,16 @@ public class ListHierarchy {
                 // Found
                 return true;
             } else if(
-                    dummy.isGreaterThan(pointer) &&
+                    searchItem.isGreaterThan(pointer) &&
                     pointer.hasNext() &&
-                    dummy.isLessThan(pointer.getNext())
+                    searchItem.isLessThan(pointer.getNext())
             ) {
                 // Search Down.
                 pointer = pointer.getDown();
             } else if(
-                    dummy.isGreaterThan(pointer) &&
+                    searchItem.isGreaterThan(pointer) &&
                     pointer.hasNext() &&
-                    dummy.isGreaterThan(pointer)
+                    searchItem.isGreaterThan(pointer)
             ) {
                 pointer = pointer.getNext();
             } else if(
@@ -114,16 +134,16 @@ public class ListHierarchy {
             ) {
                 pointer = pointer.getDown();
             } else if(
-                    dummy.isLessThan(pointer) &&
+                    searchItem.isLessThan(pointer) &&
                     pointer.hasPrevious()
             ) {
                 pointer = pointer.getPrevious();
             } else if(
-                    dummy.isLessThan(pointer) &&
+                    searchItem.isLessThan(pointer) &&
                     !pointer.hasPrevious()
             ) {
                 pointer = pointer.getDown();
-            } else if(dummy.isGreaterThan(pointer) && !pointer.hasNext()) {
+            } else if(searchItem.isGreaterThan(pointer) && !pointer.hasNext()) {
                 pointer = pointer.getDown();
             }
 
@@ -133,7 +153,7 @@ public class ListHierarchy {
     }
 
     public ListHierarchy() {
-        this.hierarchy = new Node[1];
+        this.hierarchy = new Node[2];
     }
 
     public ListHierarchy(ICoin coin) {
@@ -151,7 +171,7 @@ public class ListHierarchy {
             while (pointer != null) {
                 System.out.printf(pointer.toString());
                 if(pointer.getNext() != null) {
-                    System.out.print("---->");
+                    System.out.print("<---->");
                 }
                 pointer = pointer.getNext();
             }
