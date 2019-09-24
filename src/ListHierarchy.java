@@ -25,15 +25,17 @@ public class ListHierarchy {
      * @param level the level where it should be inserted.
      * @param startFrom acts as head of the list node to add element from.
      * @param linkFrom acts as the node from the bottom hierarchy.
-     * @return
+     * @return true if insertion was successful.
      */
     private boolean add(String key, int level, Node startFrom, Node linkFrom) {
         handleOverflow(); // Handle Overflow
         Node item = new Node(key); // Create item to be added.
-        /*********************** Initialize head and last up pointer for traversal ****************/
+
+        //*********************** Initialize head and last up pointer for traversal ****************
         Node head = startFrom == null? hierarchy[level] : startFrom;
         Node lastUp = startFrom == null? (hierarchy[level] == null ? null : hierarchy[level].getUp()) : startFrom.getUp();
-        /*********************** Setup UP and DOWN References. ************************************/
+        //*********************** Setup UP and DOWN References. ************************************
+
         if(linkFrom != null) {
             item.setDown(linkFrom);
             linkFrom.setUp(item);
@@ -58,8 +60,12 @@ public class ListHierarchy {
                         addBefore(pointer, item); // Add in between the linked list
                         addToHierarchy(key,level+1, lastUp, item); // Flip the coin and add to higher hierarchy
                         return true;
-                    } else if( pointer.hasNext() && item.isGreaterThan(pointer) ) {
+                    } else if( item.isGreaterThan(pointer) && pointer.hasNext() && item.isLessThan(pointer.getNext())) {
                         addAfter(pointer, item); // Add at the end of the linked list.
+                        addToHierarchy(key,level+1, lastUp, item); // Flip the coin and add to higher hierarchy
+                        return true;
+                    } else if(item.isGreaterThan(pointer) && !pointer.hasNext()) {
+                        addAfter(pointer, item);
                         addToHierarchy(key,level+1, lastUp, item); // Flip the coin and add to higher hierarchy
                         return true;
                     } else if( pointer.getPrevious() == null && item.isLessThan(pointer) ) {
@@ -67,7 +73,7 @@ public class ListHierarchy {
                         hierarchy[level] = item; // Flip the coin and add to higher hierarchy
                         addToHierarchy(key,level+1, lastUp, item);
                         return true;
-                    } else if(pointer.getData().equals(item)) {
+                    } else if(pointer.getData().equals(item.getData())) {
                         // Skip if Entry Exists.
                         // Do not add it to higher hierarchy, it's fate was already decided while insertion.
                         return true;
@@ -130,7 +136,7 @@ public class ListHierarchy {
      * @param linkFrom Node from which branch to next hierarchy is created.
      */
     private void addToHierarchy(String key, int level, Node startFrom, Node linkFrom) {
-        boolean flag = this.coin.flip() == 1 ? true : false;
+        boolean flag = this.coin.flip() == 1;
         if(flag) add(key, level, startFrom, linkFrom);
     }
 
@@ -147,8 +153,8 @@ public class ListHierarchy {
         do {
             if(
                     pointer.getData().equals(key) ||
-                    (pointer.hasNext() && pointer.getNext().equals(key)) ||
-                    (pointer.hasPrevious() && pointer.getPrevious().equals(key))
+                    (pointer.hasNext() && pointer.getNext().getData().equals(key)) ||
+                    (pointer.hasPrevious() && pointer.getPrevious().getData().equals(key))
             ) {
                 // Found
                 return true;
@@ -197,7 +203,7 @@ public class ListHierarchy {
     /**
      * Constructor with structure of initial size of 2 Nodes to demonstrate dynamic scaling.
      */
-    public ListHierarchy() {
+    private ListHierarchy() {
         this.coin = new ArrayCoin(); // Default coin initialization.
         this.hierarchy = new Node[2];
     }
@@ -219,7 +225,7 @@ public class ListHierarchy {
             if(pointer == null) continue;
             System.out.print("LEVEL "+i+":\t");
             while (pointer != null) {
-                System.out.printf(pointer.toString());
+                System.out.print(pointer.toString());
                 if(pointer.hasNext()) {
                     System.out.print(" <----> ");
                 }
@@ -237,10 +243,11 @@ public class ListHierarchy {
         if(levels == hierarchy.length) { // If Overflow
 
             Node[] newHierarchy = new Node[levels * 2]; // Double the size.
+            System.arraycopy(hierarchy, 0, newHierarchy, 0, levels);
 
-            for (int i = 0; i < hierarchy.length; i++) {
-                newHierarchy[i] = hierarchy[i]; // Copy from previous array.
-            }
+//            for (int i = 0; i < hierarchy.length; i++) {
+//                newHierarchy[i] = hierarchy[i]; // Copy from previous array.
+//            }
             hierarchy = newHierarchy; // Update reference with new array.
         }
     }

@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8c3671a-d38a-4ad1-a8a6-4b710999e82a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FairCoin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ICoin.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ListHierarchy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListHierarchy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnfairCoin.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +90,7 @@
       <workItem from="1569195441763" duration="1371000" />
       <workItem from="1569251917049" duration="2073000" />
       <workItem from="1569254607580" duration="3335000" />
-      <workItem from="1569282163719" duration="4343000" />
+      <workItem from="1569282163719" duration="5719000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit.">
       <created>1569172854441</created>
@@ -125,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569255637431</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added internal documentation and now compatible with prof's code.">
+      <created>1569288090028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569288090028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -168,37 +170,18 @@
     <MESSAGE value="Added FairCoin and UnfairCoin for Coin impl.&#10;Achieved Milestone 1 of creating Structure." />
     <MESSAGE value="Added Find method and done some code refactoring." />
     <MESSAGE value="Few changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Few changes." />
+    <MESSAGE value="Added internal documentation and now compatible with prof's code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added internal documentation and now compatible with prof's code." />
   </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="breakpointCondition">
-      <expression>
-        <expression-string>key.equals(&quot;pepper&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>key.equals(&quot;grape&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>key == &quot;grape&quot;</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>dummy.isGreaterThan(pointer)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>pointer.getData().compareTo(item.getData())</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ListHierarchy.java</url>
+          <line>245</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
