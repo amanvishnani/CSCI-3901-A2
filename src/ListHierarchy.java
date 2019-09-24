@@ -244,10 +244,6 @@ public class ListHierarchy {
 
             Node[] newHierarchy = new Node[levels * 2]; // Double the size.
             System.arraycopy(hierarchy, 0, newHierarchy, 0, levels);
-
-//            for (int i = 0; i < hierarchy.length; i++) {
-//                newHierarchy[i] = hierarchy[i]; // Copy from previous array.
-//            }
             hierarchy = newHierarchy; // Update reference with new array.
         }
     }
