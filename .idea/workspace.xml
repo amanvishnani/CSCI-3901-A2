@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8c3671a-d38a-4ad1-a8a6-4b710999e82a" name="Default Changelist" comment="Added Find method and done some code refactoring.">
+    <list default="true" id="d8c3671a-d38a-4ad1-a8a6-4b710999e82a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FairCoin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ICoin.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ListHierarchy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListHierarchy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnfairCoin.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SkipUI">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Assignment2" />
@@ -64,8 +69,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SkipUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SkipUI" />
+      <module name="Assignment2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SkipUI" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -81,7 +94,8 @@
       <workItem from="1569171735593" duration="19994000" />
       <workItem from="1569195441763" duration="1371000" />
       <workItem from="1569251917049" duration="2073000" />
-      <workItem from="1569254607580" duration="977000" />
+      <workItem from="1569254607580" duration="3335000" />
+      <workItem from="1569282163719" duration="4343000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit.">
       <created>1569172854441</created>
@@ -104,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569193083783</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Few changes.">
+      <created>1569255637430</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569255637431</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -146,7 +167,8 @@
     <MESSAGE value="Init Commit." />
     <MESSAGE value="Added FairCoin and UnfairCoin for Coin impl.&#10;Achieved Milestone 1 of creating Structure." />
     <MESSAGE value="Added Find method and done some code refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Find method and done some code refactoring." />
+    <MESSAGE value="Few changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Few changes." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">

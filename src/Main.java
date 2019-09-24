@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        boolean[] debugSequence = {false, true, true, false, true, false, false, true, true, false, false, false, true, false};
+        int[] debugSequence = {0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0};
         String[] testStrings = {"apple", "date", "grape", "lettuce", "orange", "pepper", "salt", "tea"};
-//        ICoin coin = new UnfairCoin(debugSequence);
-        ICoin coin = new FairCoin();
+//        Coin coin = new ArrayCoin();
+        Coin coin = new RandomCoin();
 
         ListHierarchy lh = new ListHierarchy(coin);
         for (String str :
