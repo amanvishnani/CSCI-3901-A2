@@ -53,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SkipUI">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Assignment2" />
@@ -73,8 +73,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SkipUI" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SkipUI" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +91,8 @@
       <workItem from="1569251917049" duration="2073000" />
       <workItem from="1569254607580" duration="3335000" />
       <workItem from="1569282163719" duration="6723000" />
-      <workItem from="1569382520278" duration="7393000" />
+      <workItem from="1569382520278" duration="7434000" />
+      <workItem from="1569441969236" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit.">
       <created>1569172854441</created>
@@ -142,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569291598515</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Few changes and bug fixes.">
+      <created>1569427440235</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569427440235</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -188,6 +196,7 @@
     <MESSAGE value="Added internal documentation and now compatible with prof's code." />
     <MESSAGE value="Bug fixes and more." />
     <MESSAGE value="Removed commented code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed commented code." />
+    <MESSAGE value="Few changes and bug fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Few changes and bug fixes." />
   </component>
 </project>

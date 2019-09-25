@@ -45,8 +45,6 @@ public class ListHierarchy {
                 // Insert at the head of the hierarchy.
                 hierarchy[level] = item;
                 levels++;
-                // Flip the coin and add to higher hierarchy
-                addToHierarchy(key,level+1, lastUp, item);
                 return true;
             } else {
                 Node pointer = head;
