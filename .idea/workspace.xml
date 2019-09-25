@@ -92,7 +92,7 @@
       <workItem from="1569254607580" duration="3335000" />
       <workItem from="1569282163719" duration="6723000" />
       <workItem from="1569382520278" duration="7434000" />
-      <workItem from="1569441969236" duration="37000" />
+      <workItem from="1569441969236" duration="278000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit.">
       <created>1569172854441</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569427440235</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Now coin is not flipped when the node is added at any head of the hierarchy.">
+      <created>1569442208320</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569442208320</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -197,6 +204,7 @@
     <MESSAGE value="Bug fixes and more." />
     <MESSAGE value="Removed commented code." />
     <MESSAGE value="Few changes and bug fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Few changes and bug fixes." />
+    <MESSAGE value="Now coin is not flipped when the node is added at any head of the hierarchy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now coin is not flipped when the node is added at any head of the hierarchy." />
   </component>
 </project>

@@ -31,9 +31,8 @@ public class ListHierarchy {
         handleOverflow(); // Handle Overflow
         Node item = new Node(key); // Create item to be added.
 
-        //*********************** Initialize head and last up pointer for traversal ****************
+        //*********************** Initialize head pointer for traversal ****************
         Node head = startFrom == null? hierarchy[level] : startFrom;
-        Node lastUp = startFrom == null? (hierarchy[level] == null ? null : hierarchy[level].getUp()) : startFrom.getUp();
         //*********************** Setup UP and DOWN References. ************************************
 
         if(linkFrom != null) {
@@ -48,7 +47,7 @@ public class ListHierarchy {
                 return true;
             } else {
                 Node pointer = head;
-                lastUp = head.getUp();
+                Node lastUp = head.getUp();
                 do {
                     if(
                             item.isLessThan(pointer) &&
