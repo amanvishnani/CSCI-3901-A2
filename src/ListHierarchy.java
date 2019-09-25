@@ -94,7 +94,7 @@ public class ListHierarchy {
     }
 
     /**
-     * Adds a node before a before an element.
+     * Adds a node before an element.
      * @param node The reference node.
      * @param newNode The node item to be added.
      * @return true on success.
@@ -112,7 +112,7 @@ public class ListHierarchy {
     }
 
     /**
-     * Adds a node before a After an element.
+     * Adds a node After an element.
      * @param node The reference node.
      * @param newNode The node item to be added.
      * @return true on success.
@@ -168,7 +168,7 @@ public class ListHierarchy {
             } else if(
                     searchItem.isGreaterThan(pointer) &&
                     pointer.hasNext() &&
-                    searchItem.isGreaterThan(pointer)
+                    searchItem.isGreaterThan(pointer.getNext())
             ) {
                 // Go to Next
                 pointer = pointer.getNext();

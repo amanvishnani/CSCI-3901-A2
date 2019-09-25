@@ -90,7 +90,8 @@
       <workItem from="1569195441763" duration="1371000" />
       <workItem from="1569251917049" duration="2073000" />
       <workItem from="1569254607580" duration="3335000" />
-      <workItem from="1569282163719" duration="5719000" />
+      <workItem from="1569282163719" duration="6723000" />
+      <workItem from="1569382520278" duration="7393000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit.">
       <created>1569172854441</created>
@@ -127,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569288090028</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bug fixes and more.">
+      <created>1569289585079</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569289585079</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Removed commented code.">
+      <created>1569291598515</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569291598515</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -171,17 +186,8 @@
     <MESSAGE value="Added Find method and done some code refactoring." />
     <MESSAGE value="Few changes." />
     <MESSAGE value="Added internal documentation and now compatible with prof's code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added internal documentation and now compatible with prof's code." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ListHierarchy.java</url>
-          <line>245</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Bug fixes and more." />
+    <MESSAGE value="Removed commented code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed commented code." />
   </component>
 </project>
